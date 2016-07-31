@@ -5,7 +5,7 @@
   <version>1.0</version>
   <author>alfra (fongreecss@gmail.com)</author>
   <link>http://github.com/frasaleksander</link>
-    <file path="catalog/controller/checkout/{guest.php,guest_shipping.php,register.php,payment_address.php}">
+    <file path="catalog/controller/checkout/{guest.php,guest_shipping.php,register.php,payment_address.php}|catalog/controller/{total,api}/shipping.php">
         <operation error="log">
             <search><![CDATA[$json['error']['zone'] = $this->language->get('error_zone');]]></search>
             <add position="replace"><![CDATA[]]></add>
@@ -18,7 +18,7 @@
             <add position="replace"><![CDATA[]]></add>
       </operation>
     </file>
-    <file path="catalog/view/theme/{*}/template/checkout/{guest.tpl,register.tpl,payment_address.tpl,guest_shipping.tpl}|catalog/view/theme/{*}/template/account/{address_form.tpl,register.tpl}">
+    <file path="catalog/view/theme/{*}/template/checkout/{guest.tpl,register.tpl,payment_address.tpl,guest_shipping.tpl}|catalog/view/theme/{*}/template/account/{address_form.tpl,register.tpl}|catalog/view/theme/{*}/template/total/shipping.tpl">
         <operation error="log">
             <search regex="true">
               <![CDATA[/<select\sname="zone_id"(.*?)<\/select>/s]]>
