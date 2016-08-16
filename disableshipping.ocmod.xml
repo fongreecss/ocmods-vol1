@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>Disable shipping methods when free shipping available</name>
+	<code>disable_shipping_methods_when_free_shipping_available</code>
+	<version>1.0</version>
+	<author>the1path.com (modified by AlFra)</author>
+	<link>http://github.com/frasaleksander</link>
+	<file path="catalog/model/shipping/auspost.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/citylink.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/fedex.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+	<file path="catalog/model/shipping/flat.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/item.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/parcelforce_48.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/pickup.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/royal_mail.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/ups.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/usps.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+   
+   <file path="catalog/model/shipping/weight.php">
+		<operation error="log">
+			<search><![CDATA[
+				if ($status) {
+			]]></search>
+			<add position="before"><![CDATA[
+				if ((float)$this->cart->getTotal() >= $this->config->get('free_total')) {
+				   $status = false;
+				}
+			]]></add>
+		</operation>
+   </file>
+
+	
+</modification>
