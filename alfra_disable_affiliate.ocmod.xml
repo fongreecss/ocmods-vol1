@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Alfra Disable Affiliate</name>
+  <code>alfra_disable_affiliate</code>
+  <version>1.0</version>
+  <author>alfra (fongreecss@gmail.com)</author>
+  <link>http://github.com/frasaleksander</link>
+    <file path="catalog/view/theme/{*}/template/common/footer.tpl">
+        <operation>
+            <search><![CDATA[<li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>]]></search>
+            <add position="replace"><![CDATA[]]></add>
+        </operation>
+    </file>
+    <file path="catalog/controller/affiliate/{login.php,register.php,forgotten.php,password.php,account.php,edit.php}">
+        <operation>
+            <search><![CDATA[public function index() {]]></search>
+            <add position="after"><![CDATA[$this->response->redirect($this->url->link('common/home', '', true));exit();]]></add>
+        </operation>
+    </file>
+</modification>
