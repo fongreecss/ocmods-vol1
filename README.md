@@ -49,3 +49,6 @@ Possible `$order` values:
     </file>
 </modification>
 ```
+##alfra_disable_affiliate.ocmod.xml
+Prevents affiliate login,register,forgotten password,editing profile,etc. Everything that is affiliate related.
+
